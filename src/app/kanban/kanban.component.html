@@ -1,0 +1,6 @@
+
+        <ejs-kanban #kanbanObj width='100%' height="100%" cssClass='kanban-swimlane'
+            [keyField]='kanbanConfig.columnKeyField'[dataSource]='kanbanData'
+            [showEmptyColumn]="true" (dragStart)="dragStart($event)" (dragStop)="dragStop($event)" [externalDropId]='externalDropId'
+            [columns]="kanbanConfig.columns" [cardSettings]='cardSettings' [swimlaneSettings]='swimlaneSettings'>
+        </ejs-kanban>

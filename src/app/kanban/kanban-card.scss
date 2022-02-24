@@ -1,0 +1,63 @@
+.card {
+    --card-background: #fff; 
+    height: 100%;
+    background: var(--card-background);
+    border-radius: 3px;
+    color: #333;
+    cursor: move;
+    font-size: 14px;
+    padding-left: 10px;
+    position: relative;
+    transition: background-color 140ms ease-in-out, border-color 75ms ease-in-out;
+
+    .card-summary {
+        display: block;
+        box-sizing: content-box;
+        line-height: 1.42857143;
+        max-height: 4.28571429em;
+        overflow: hidden;
+        margin-top: 5px;
+        font-size: 22px;
+        line-height: 28px;
+        color: rgba(0, 0, 0, 0.6);
+        padding: 0;
+        font-family: sans-serif;
+    }
+}
+
+.card-out-of-sync{
+    --card-background: #ffc848; 
+}
+
+.card > section {
+    overflow: hidden;
+}
+
+.card-bottom-row {
+    img {
+        width: 15px;
+        margin-left: 3px;
+    }
+    .bottom-right {
+        float: right;
+        margin-right: 10px;
+        text-align: center;
+        a {
+            text-decoration-color: rgb(94, 108, 132);
+            text-decoration-line: none;
+            padding: 0;
+            bottom: 7px;
+            right: 40px;
+            display: inline-block;
+            font-size: 12px;;
+            position: absolute;
+        }
+        .avatar-img {
+            margin-left: 6px;
+            width: 24px;
+            cursor: move;
+            border-radius: 12px;
+
+        }
+    }
+}

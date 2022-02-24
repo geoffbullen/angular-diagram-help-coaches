@@ -1,0 +1,19 @@
+<div class="page-content">
+
+    <ejs-symbolpalette height="10%" id="symbolpalette" [palettes]="palettes" [symbolHeight]=41 [symbolWidth]=43></ejs-symbolpalette>
+
+    <ejs-diagram #diagram id="diagram" width="100%" height="90%" [nodes]="nodes" [scrollSettings]="scrollSettings"
+        [pageSettings]='pageSettings' (created)="onDiagramCreated()" (drop)="drop($event)">
+        <ng-template #nodeTemplate let-data>
+            <ng-container *ngIf="data.id.startsWith('kanban_')">
+                <app-kanban #customKanban width="100%" height="100px" 
+                    [id]='data.id'
+                    [cardData]='data.addInfo.cardData'
+                    (onDropOutside)="onDropFromKanban($event)" 
+                    (onKanbanDataChange)="onKanbanDataChange($event)"
+                    (onDragStart)="onKanbanDragStart($event)"
+                    (onDragStop)="onKanbanDragStop($event)"></app-kanban>
+            </ng-container>
+        </ng-template>
+    </ejs-diagram>
+</div>
